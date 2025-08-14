@@ -1,0 +1,43 @@
+  #mother{
+   width: 335px;
+   height: 370px;
+   background: #e7e7e7;
+   border: none;
+   position: relative;
+   left: 10px;
+   top: 50px;
+  }
+  #child input{
+    height: 35px;
+    width: 60%;
+    margin-left: 7.5px;
+    position: relative;
+    top: 5px;
+    background: white;
+    border: none;
+    border-radius: 30px;
+    margin-top: 20px;
+  }
+  #child-one input{
+    height: 35px;
+    width: 85%;
+    margin-left: 7.5px;
+    position: relative;
+    top: 5px;
+    background: white;
+    border: none;
+    border-radius: 30px;
+    margin-top: 20px;
+  }
+  #save{
+    position: relative;
+    top: 30.0px;
+    left: 100px;
+    background: #0eae36;
+    border: none;
+    border-radius: 50px;
+    height: 40px;
+    width: 35%;
+    color: white ;
+    font-size: 20px;
+  }

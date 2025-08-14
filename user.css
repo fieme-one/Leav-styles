@@ -1,0 +1,88 @@
+body{
+      padding: 0;
+      margin: 0;
+     background:#deffe8 ;
+    }
+    #a-one{
+      width: 350px;
+      height: 600px;
+      background: white;
+      border: none;
+      border-radius: 50px;
+      margin-top: 40px;
+      margin-left: 20px;
+    }
+    #child-one{
+      position: relative;
+      width: 325px;
+      height: 310px;
+      border-radius: 50px;
+      border: none;
+      background: #cdcfcb;
+      margin-left: 5px;
+      left: 7.5px;
+      top: 7px;
+      
+    }
+    /* for spans*!important*/
+    .left{
+      position: relative;
+      top: 20px;
+      left: 25.5px;
+      color: #a5a5a5;
+      font-size: 7.3pt;
+    }
+    .right{
+     position: relative;
+      top: 20px;
+      left: 175.505px;
+      color: #a5a5a5;
+      font-size: 7.3pt; 
+    }
+    #username{
+      position: relative ;
+      top: 60px;
+      left: 20px;
+      width: 80.0px;
+      height: auto;
+      border-bottom: 1px solid #a5a5a5;
+      
+      color: #a5a5a5;
+    }
+    #email{
+position: relative;
+top: 120px;
+left: 20px;
+width: 140.0px;
+height: auto;
+border-bottom: 1px solid #a5a5a5;
+
+color: #a5a5a5;
+}
+#delete{
+  position: relative;
+  top: 190px;
+  width: 100px;
+  height:30px;
+  left: 40px;
+  background: #8df754;
+  padding-top: 15px;
+  text-align: center;
+ border: none;
+ border-radius: 50px;
+ font-size: 13px;
+  
+}
+#sgnout{
+  position: relative;
+  top: 145.0px;
+  width: 100px;
+  height:30px;
+  left: 200px;
+  background: #8df754;
+  padding-top: 15px;
+  text-align: center;
+ border: none;
+ border-radius: 50px;
+ font-size: 13px;
+}

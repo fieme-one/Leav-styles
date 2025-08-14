@@ -1,0 +1,60 @@
+nav{
+    overflow: hidden;
+    z-index: -99;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 57px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: white;
+    display: flex;
+    
+  }
+  /*image*/
+  #d-width{
+    background: url('https://raw.githubusercontent.com/fieme-one/Cacha-fitness/refs/heads/main/hand-drawn-business-planning_52683-76248.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 60px;
+    position: absolute;
+    right: 0px;
+  }
+  #greeting{
+    width: 150px;
+    height: 250.0px;
+    display: flexbox;
+    background: white;
+    border: none;
+    position: absolute;
+    left: 0px;
+    margin-top: 70px;
+    font-size: 38px;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: rgba(0, 0, 0, 1);
+    line-height: 1.2;
+  }
+  #mother{
+    
+    margin-top: 20px;
+    
+  }
+  #child{
+    margin-top: 10px;
+    position: relative;
+    top: 380.0px;
+    border: 1px solid black;
+    width: 330px;
+    height: 40.0px;
+    margin-left: 12.5px;
+    padding-left: 20px;
+    font-size: 30px;
+    padding-top: 10px;
+    transition: 0.5s;
+  }
+  #child:hover:active{
+   background: greenyellow;
+  }
+  
