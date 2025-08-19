@@ -41,3 +41,18 @@
     color: white ;
     font-size: 20px;
   }
+   #navs{
+    display: flex;
+    border-bottom: 1px solid black
+    ;
+    width: 100%;
+    height: 50px;
+    
+  }
+  .imgs img{
+    width: 30px;
+    height: 30px;
+    position: relative ;
+    left: 20px;
+    margin-top: 10px;
+  }
