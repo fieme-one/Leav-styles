@@ -17,7 +17,7 @@
     border: none;
     border-radius: 30px;
     margin-top: 20px;
-    padding-left: 10px;
+    padding-left: 50px;
   }
   #child-one input{
     height: 35px;
@@ -29,7 +29,7 @@
     border: none;
     border-radius: 30px;
     margin-top: 20px;
-    padding-left: 10px;
+    padding-left: 50px;
   }
   #save{
     position: relative;
