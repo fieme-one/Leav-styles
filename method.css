@@ -37,15 +37,15 @@ margin-left: 20px;
   }
   #childs{
     position: relative;
-    top: 10px;
+    top: 15px;
     left: 5px;
     height: 20px;
-    border: 1px solid black;
+    border: none;
     padding: 10px;
     background: white;
     width: 80%;
-    margin-top: 15px;
-    
+    margin-top: 10px;
+    border-radius: 20px;
   }
   .child-one{
     
