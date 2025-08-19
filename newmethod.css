@@ -1,35 +1,39 @@
-  #mother{
+ body{
+    padding: 0;
+    margin: 0;
+  }
+   #mother{
    width: 335px;
-   height: 370px;
+   height: 350px;
    background: #e7e7e7;
    border: none;
    position: relative;
-   left: 10px;
+   left: 22.50px;
    top: 50px;
   }
   #child input{
     height: 35px;
-    width: 60%;
+    width: 45%;
     margin-left: 7.5px;
     position: relative;
     top: 5px;
     background: white;
     border: none;
     border-radius: 30px;
-    margin-top: 20px;
-    padding-left: 50px;
+margin-top: 15.0px;
+    padding-left: 32.0px;
   }
   #child-one input{
     height: 35px;
-    width: 85%;
+    width: 75%;
     margin-left: 7.5px;
     position: relative;
     top: 5px;
     background: white;
     border: none;
     border-radius: 30px;
-    margin-top: 20px;
-    padding-left: 50px;
+    margin-top: 15px;
+    padding-left: 32px;
   }
   #save{
     position: relative;
@@ -58,3 +62,21 @@
     left: 20px;
     margin-top: 10px;
   }
+    input::placeholder{
+      margin-left: 5px;
+      padding-left: 15px;
+    }
+    #em-icon{
+      position: relative;
+    right: 180.5px;
+      top: 12.5px;
+      width: 25px;
+      height: 25px;
+    }
+    #ph-icon{
+      position: relative;
+      right: 285.05px;
+      top: 12.5px;
+      width: 25px;
+      height: 25px;
+    }
