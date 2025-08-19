@@ -19,7 +19,7 @@ body{
   top: 20%;
   left: 12.0%;
     }
-    #choose #child{
+     #childs{
       width: 300px;
       height: 65.0px;
       border-radius: 35px;
@@ -27,13 +27,20 @@ body{
       outline-color: none;
       border: none;
       background: #eaeaea;
+      border: 1px solid black;
+      text-align: center ;
+      transition-duration: 0.3s;
+     }
+    #childs span{
+     position: relative;
+     top: 20px;
     }
     #choose img{
       position: absolute;
       left: 5.0%;
       width: 30px;
       height: 30px;
-      margin-top: 25px;
+      margin-top: 15.0px;
     }
     #delete{
       
@@ -72,5 +79,9 @@ body{
     height: 45px;
     margin-top: 37.5px;
   }
+
+}
+#childs:active{
+  background: greenyellow;
 
 }
