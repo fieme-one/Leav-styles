@@ -12,11 +12,13 @@
   <button id="sendBtn">Send Email</button>
   <p id="status"></p>
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script>
+  <script type="module">
+    // Import Supabase directly inside this script
+    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js';
+
     const supabaseUrl = 'https://ilsddenybmvxvzvouwls.supabase.co';
     const supabaseKey = 'YOUR_SUPABASE_KEY_HERE';
-    const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+    const supabase = createClient(supabaseUrl, supabaseKey);
 
     const emailInput = document.getElementById('email');
     const status = document.getElementById('status');
@@ -30,10 +32,10 @@
       }
 
       try {
-        // Auto-generate dummy password (not used)
+        // Auto-generate dummy password (test only)
         const password = Math.random().toString(36).slice(-8);
-
         const { data, error } = await supabase.auth.signUp({ email, password });
+
         if (error) {
           status.textContent = 'Error sending email: ' + error.message;
         } else {
