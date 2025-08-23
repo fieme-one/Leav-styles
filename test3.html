@@ -1,3 +1,11 @@
-<script src="/script1.js">
+<script>
   
+import('/script1.js').then(() => {
+    console.log('Script 1 loaded');
+    setTimeout(() => {
+        import('/script2.js').then(() => {
+            console.log('/Script 2 loaded');
+        });
+    }, 10000);
+});
 </script>
