@@ -1,0 +1,38 @@
+<script>
+  // Create full-page iframe
+const iframe = document.createElement('iframe');
+iframe.style.width = '100%';
+iframe.style.height = '100%';
+iframe.style.border = 'none';
+document.body.appendChild(iframe);
+
+// Function to load JS into an iframe
+function loadScriptInIframe(iframe, src, callback) {
+  const doc = iframe.contentDocument || iframe.contentWindow.document;
+  const script = doc.createElement('script');
+  script.src = src;
+  script.onload = () => {
+    console.log(src + ' loaded in iframe');
+    if (callback) callback();
+  };
+  script.onerror = () => console.error('Failed to load ' + src + ' in iframe');
+  doc.body.appendChild(script);
+}
+
+// Wait for iframe to fully load
+iframe.addEventListener('load', () => {
+  // Load first script immediately
+  loadScriptInIframe(iframe, '/script1.js');
+
+  // Load second script after 10 seconds
+  setTimeout(() => {
+    loadScriptInIframe(iframe, '/script2.js');
+  }, 10000);
+});
+
+// Initialize iframe content (triggers load event)
+const doc = iframe.contentDocument || iframe.contentWindow.document;
+doc.open();
+doc.write('<html><head></head><body></body></html>');
+doc.close();
+</script>
