@@ -9,7 +9,7 @@
   <script src="https://accounts.google.com/gsi/client" async defer></script>
 
   <!-- Telegram Login Widget -->
-  <script async src="https://telegram.org/js/telegram-widget.js?7" data-telegram-login="LeavstelegramBot" data-size="large" data-userpic="true" data-request-access="write" data-auth-url="https://teleserver-oehr.onrender.com/"></script>
+  
 
   <style>
     body {
@@ -103,31 +103,6 @@
     }
 
     // Handle Telegram login
-    async function handleTelegramLogin(telegramData) {
-      document.getElementById("status").textContent = "Verifying Telegram login...";
-
-      try {
-        const res = await fetch("https://server-1scw.onrender.com/telegram-login", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(telegramData)
-        });
-        const data = await res.json();
-
-        if (data.success) {
-          document.getElementById("status").textContent =
-            `✅ Welcome Telegram user: ${data.user.first_name} ${data.user.last_name}`;
-        } else {
-          document.getElementById("status").textContent = "❌ Telegram verification failed.";
-        }
-      } catch (err) {
-        document.getElementById("status").textContent = "⚠️ Error contacting Telegram backend.";
-      }
-    }
-
-    // Telegram widget automatically posts to /telegram-login
-    // If you want custom callback instead of auth-url, you can do:
-    // window.TelegramLoginWidget.onAuth = handleTelegramLogin;
-  </script>
+    
 </body>
 </html>
