@@ -1,0 +1,47 @@
+  #MOTHER_TOP{
+  height: 50px;
+    border: none;
+    width: 100%;
+    background: rgba(255,255,255,0.5);
+    display: flex;
+    position: fixed;
+    top: 0;
+    box-shadow: -1px 0.01px 3.50px 0px rgba(0,255,0,0.2);
+    z-index: -1;
+  }
+  #LOGO_NAME{
+    
+    color: green;
+    font-family: 'Aleo' , serif;
+    font-size: 26px;
+    opacity: 0.7;
+    
+    
+  }
+  .a{
+   
+    
+  }
+  #CHILD{
+    margin-top: 10px;
+    margin-right: 10px;
+    
+  }
+  #CHILD3{
+    position: fixed;
+    right: 5px;
+    z-index: 1;
+    margin-top: 10px;
+  }
+  #NAVBAR_ICON{
+    width: 35px;
+    height: 35px;
+  }
+  #LEAV_LOGO{
+    width: 65px;
+    height: 55px;
+    position: relative;
+    top: -10px;
+    margin-top: 5px;
+    margin-left: 5.2px;
+  }
