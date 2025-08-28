@@ -1,4 +1,4 @@
-  #MOTHER_TOP{
+ #MOTHER_TOP{
   height: 50px;
     border: none;
     width: 100%;
@@ -7,7 +7,7 @@
     position: fixed;
     top: 0;
     box-shadow: -1px 0.01px 3.50px 0px rgba(0,255,0,0.2);
-    
+    overflow: hidden;
   }
   #LOGO_NAME{
     
@@ -38,11 +38,12 @@
     height: 35px;
   }
   #LEAV_LOGO{
-    width: 65px;
-    height: 55px;
+    width: 45px;
+    height: 45px;
     position: relative;
-    top: -10px;
+  
     margin-top: 5px;
     margin-left: 5.2px;
     z-index: -1;
   }
+ 
