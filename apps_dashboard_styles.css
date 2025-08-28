@@ -47,7 +47,7 @@
     z-index: -1;
   }
    #FOOTER_EXP{
-    position: absolute;
+    position: relative;
     bottom: 0;
     height: 400px;
     background: #182145;
