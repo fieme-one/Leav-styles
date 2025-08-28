@@ -4,6 +4,7 @@ body {
     font-size: 15pt;
 }
 .a img{
+    z-index: 1;
     width: 28px;
     height: 28px;
     margin-top: 12.5px;
@@ -16,7 +17,7 @@ body {
     margin-left: 20px;
     margin-top: 0px;
     left: 4px;
-    
+    z-index: 1;
     
 }
 .c img{
@@ -26,7 +27,7 @@ body {
     margin-left: 110px;
     position: absolute;
     right: 130px;
-    
+    z-index: 1;
 }
 .d img{
     width: 28px;
@@ -37,6 +38,8 @@ body {
      filter: brightness(0) saturate(100%) invert(77%) sepia(52%) saturate(2%) hue-rotate(338deg) brightness(92%) contrast(103%);
      position: absolute;
      right: 10px;
+     z-index: 1;
+     
 }
 .e{
     margin-left: 15px;
