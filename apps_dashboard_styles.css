@@ -58,7 +58,7 @@
   }
   #CONTAINER_SPAN{
     width: 30%;
-    border: 1px solid black;
+    border: none;
     height: auto;
     position: absolute;
     right: 150px;
