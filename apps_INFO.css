@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    padding: 0;
+  }
+    h1{
+      font-size: 30px;
+      margin-top: 150px;
+      color: black;
+    }
+    section{
+      padding-top: 20px;
+      
+      margin-top: 10px;
+      
+    }
+    main{
+      padding-top: 100px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 450px;
+      background: linear-gradient(135deg, white 0%,greenyellow 300%);
+      width: 80%;
+      height: auto;
+      margin-left: 20px;
+      line-height: 2;
+      font-family: 'Aleo', serif;
+    }
