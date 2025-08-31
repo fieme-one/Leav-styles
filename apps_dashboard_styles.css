@@ -36,6 +36,7 @@
   #NAVBAR_ICON{
     width: 35px;
     height: 35px;
+    z-index: 1;
   }
   #LEAV_LOGO{
     width: 35px;
