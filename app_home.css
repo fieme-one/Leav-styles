@@ -2,16 +2,22 @@ body{
       margin: 0;
       padding: 0;
     }
+  select  option{
+      background: black;
+    }
     #NAVBAR_APPS{
+      
       font-family: 'Aleo', serif;
       width: 100%;
-      position: fixed;
+      position: absolute;
       border: none;
-      background: #ddd;
+      background: linear-gradient(300deg ,white 0% , yellowgreen 200%);
       transition-duration: 1s;
       right: 1.5px;
       border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;
+      top: 0;
+      overflow: hidden;
     }
     select{
       width: 35%;
@@ -20,9 +26,10 @@ body{
       font-size: 24px;
       padding-left: 40px;
       margin-top: 30px;
+      border-radius: -30px;
     }
     #CANCEL_{
-      position: fixed;
+      position: absolute;
       right: 10px;
       top: 10px;
     }
@@ -72,6 +79,6 @@ body{
     }
     @media(min-width: 420px){
       #NAVBAR_APPS{
-        position: relative;
+        position: absolute;
       }
     }
