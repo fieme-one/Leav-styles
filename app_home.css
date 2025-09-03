@@ -9,7 +9,7 @@ body{
       
       font-family: 'Aleo', serif;
       width: 100%;
-      position: absolute;
+      position: fixed;
       border: none;
       background: linear-gradient(300deg ,white 0% , yellowgreen 200%);
       transition-duration: 1s;
