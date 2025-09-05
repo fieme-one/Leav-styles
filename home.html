@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body{
+  margin:0;
+  padding: 0;
+}
+#internet{
+  color: yellowgreen;
+  text-align: center;
+  margin-top: 50px;
+}
+  #loaderBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 0;
+    background: yellowgreen; /* Facebook blue */
+    transition: width 0.2s ease;
+    z-index: 9999;
+  }
+  </style>
+  <link href="https://leavstyles.netlify.app/home_apps.css" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css?fontfamily=Aleo" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Aleo" rel="stylesheet">
+<link href="https://leavstyles.netlify.app/apps_dashboard_styles.css" rel="stylesheet">
+<link href="https://leavstyles.netlify.app/app_home.css" rel="stylesheet ">
+  <link href="https://leavstyles.netlify.app/apps_INFO.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title></title>
+</head>
+
+<body>
+  <nav id="MOTHER_TOP">
+  <div id="CHILD2">
+    <img id="LEAV_LOGO" src="#">
+  </div>
+  
+  <div id="CHILD" class="a">
+    <span id="LOGO_NAME">Leaf</span>
+  </div>
+  
+  <div id="CHILD3">
+    <img id="NAVBAR_ICON" src="#">
+  </div>
+</nav>
+<div id="loaderBar"></div>
+  <div id="NAVBAR_APPS">
+    <div id="CANCEL_"> <img src="#" id="CANCEL_IMG"> </div>
+    <div id="MAIN_APPS">
+      <div id="CHILD_">Downloads</div>
+      <div id="CHILD_">About Us</div>
+      <div id="CHILD_">Home</div>
+      <select>
+        <option>ENG</option>
+      </select>
+    </div>
+    <div id="DOWN_SIGNUP">
+      <div id="SIGNUP_">Sign Up</div>
+      <div id="LOGIN_">Login</div>
+    </div>
+  </div>
+    <script src="https://leavstyles.netlify.app/app_home.js"></script>
+    <main id="content"></main>
+    <footer id="FOOTER_EXP">
+  <div id="FOOTER_LOGO"><img src="#" id="LOGO_"><span id="logo">Leaf</span></div>
+  <article id="DISCRIPT">Leaf is the first-ever webapp that allows its Ethiopian users to make money online by watching videos and other. Reach your networks' full potential by getting paid in etb or crypto!</article>
+  <br>
+  <div id="CONTAINER_SPAN">
+  <span id="download">Downloads</span>
+  <span id="contact">Contacts</span>
+  <span id="privacy">privacy policy</span>
+  <span id="cookies">Cookies policy</span>
+  <span id="tandc">Term and Condition</span>
+  <span id="about">About leaf</span>
+  </div>
+</footer>
+    <script src="https://leavstyles.netlify.app/footer.js"></script>
+</body> 
+
+  
+
+<script>
+const loader = document.getElementById('loaderBar');
+const content = document.getElementById('content');
+
+// mapping between span IDs and JSON files
+const pages = {
+  home: "home.json",
+  about: "about.json",
+  privacy: "privacy.json",
+  cookies: "cookies.json",
+  tandc: "tandc.json"
+};
+
+// helper: show loader bar
+function startLoader() {
+  loader.style.width = "0%";
+  let progress = 0;
+  return setInterval(() => {
+    if (progress < 80) {
+      progress += 5;
+      loader.style.width = progress + "%";
+    }
+  }, 100);
+}
+
+// fetch + show JSON
+async function loadPage(page) {
+  const interval = startLoader();
+  try {
+    const res = await fetch(`https://cdn.jsdelivr.net/gh/fieme-one/json@main/${page}`);
+    const data = await res.json();
+
+    // Show first content (adjust to your JSON structure)
+    content.innerHTML = data[0].content[0];
+
+    // finish loader
+    loader.style.width = "100%";
+    setTimeout(() => loader.style.width = "0%", 500);
+  } catch (err) {
+    content.innerHTML = `<section id="internet">Check your internet</section>`;
+  } finally {
+    clearInterval(interval);
+  }
+}
+
+// add event listeners to spans
+document.querySelectorAll("#CONTAINER_SPAN").forEach(span => {
+  span.addEventListener("click", () => {
+    const id = span.id;
+    if (pages[id]) {
+      loadPage(pages[id]); // load matching JSON
+    }
+  });
+});
+document.getElementById("about").addEventListener("click", () => {
+  loadPage("about.json");
+});
+
+document.getElementById("privacy").addEventListener("click", () => {
+  loadPage("privacy.json");
+});
+
+document.getElementById("cookies").addEventListener("click", () => {
+  loadPage("cookies.json");
+});
+
+document.getElementById("tandc").addEventListener("click", () => {
+  loadPage("t&c.json");
+});
+
+document.getElementById("download").addEventListener("click", () => {
+  loadPage("download.json");
+});
+// load home.json by default
+loadPage(pages.home);
+</script>
+
+</html>
