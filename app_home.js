@@ -10,17 +10,17 @@ document.addEventListener("DOMContentLoaded", function() {
   cancel.src="https://raw.githubusercontent.com/fieme-one/Cacha-fitness/refs/heads/main/close.png";
  
    nav.style.height= "0";
-  
+  const footer_zindex = document.getElementById('FOOTER_EXP')
    
   tap.addEventListener("click", 
     function(){
       nav.style.display= "block"
        nav.style.height= wHeight;
-      
+      footer_zindex.style.zIndex= "-999";
     });
     cancel.addEventListener("click",
       function(){
         nav.style.height="0";
-        
+        footer_zindex="999";
       });
 });
