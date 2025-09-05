@@ -142,22 +142,40 @@ document.querySelectorAll("#CONTAINER_SPAN").forEach(span => {
 });
 document.getElementById("about").addEventListener("click", () => {
   loadPage("about.json");
+  window.scrollTo({
+  top: 0,
+  behavior: "smooth"
+});
 });
 
 document.getElementById("privacy").addEventListener("click", () => {
   loadPage("privacy.json");
+  window.scrollTo({
+  top: 0,
+  behavior: "smooth"
+});
 });
 
 document.getElementById("cookies").addEventListener("click", () => {
   loadPage("cookies.json");
+  window.scrollTo({
+  top: 0,
+  behavior: "smooth"
+});
 });
 
 document.getElementById("tandc").addEventListener("click", () => {
-  loadPage("t&c.json");
+  loadPage("t&c.json");window.scrollTo({
+  top: 0,
+  behavior: "smooth"
+});
 });
 
 document.getElementById("download").addEventListener("click", () => {
-  loadPage("download.json");
+  loadPage("download.json");window.scrollTo({
+  top: 0,
+  behavior: "smooth"
+});
 });
 // load home.json by default
 loadPage(pages.home);
