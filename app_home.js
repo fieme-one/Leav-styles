@@ -16,11 +16,10 @@ document.addEventListener("DOMContentLoaded", function() {
     function(){
       nav.style.display= "block"
        nav.style.height= wHeight;
-      footer_zindex.style.zIndex= "-999";
     });
     cancel.addEventListener("click",
       function(){
         nav.style.height="0";
-        footer_zindex="999";
+
       });
 });
