@@ -87,6 +87,16 @@
   
 
 <script>
+const nav_bar = document.getElementById('NAVBAR_ICON');
+nav_bar.addEventListener("click",
+  function stopper(){
+    document.getElementById('FOOTER_EXP').style.zIndex="-999";
+    document.getElementById('CANCEL_IMG').addEventListener("click",function(){
+      document.getElementById('FOOTER_EXP').style.zIndex="999";
+      
+   });
+    
+  });
 const loader = document.getElementById('loaderBar');
 const content = document.getElementById('content');
 
