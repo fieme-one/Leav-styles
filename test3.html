@@ -1,11 +1,100 @@
-<script>
-  
-import('/script1.js').then(() => {
-    console.log('Script 1 loaded');
-    setTimeout(() => {
-        import('/script2.js').then(() => {
-            console.log('/Script 2 loaded');
-        });
-    }, 10000);
-});
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React via CDN</title>
+    <!-- Load React and ReactDOM from CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Load Babel for JSX transformation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .app {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .counter {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .counter button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            background-color: #646cff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .counter button:hover {
+            background-color: #747bff;
+        }
+        .counter-value {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <!-- React component with JSX (type="text/babel" is important) -->
+    <script type="text/babel">
+        // Simple Counter Component
+        const Counter = () => {
+            const [count, setCount] = React.useState(0);
+            
+            const increment = () => setCount(count + 1);
+            const decrement = () => setCount(count - 1);
+            const reset = () => setCount(0);
+            
+            return (
+                <div className="counter">
+                    <h2>Simple Counter</h2>
+                    <div className="counter-value">{count}</div>
+                    <div>
+                        <button onClick={decrement}>-</button>
+                        <button onClick={reset}>Reset</button>
+                        <button onClick={increment}>+</button>
+                    </div>
+                </div>
+            );
+        };
+        
+        // Main App Component
+        const App = () => {
+            return (
+                <div className="app">
+                    <h1>React via CDN Example</h1>
+                    <p>This React app is loaded directly from CDN without any build process!</p>
+                    <Counter />
+                    <div style={{marginTop: '20px', padding: '10px', background: '#f0f0f0', borderRadius: '4px'}}>
+                        <h3>How this works:</h3>
+                        <ul>
+                            <li>React and ReactDOM are loaded from CDN</li>
+                            <li>Babel transforms JSX in the browser</li>
+                            <li>No build process required - just open in browser</li>
+                        </ul>
+                    </div>
+                </div>
+            );
+        };
+        
+        // Render the app
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
