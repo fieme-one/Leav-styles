@@ -63,7 +63,7 @@
       const userData = { email, firstName, lastName, number, bank };
 
       try {
-        const res = await fetch("https://payment-vnsp.onrender.com//saveUser", { 
+        const res = await fetch("https://payment-vnsp.onrender.com/saveUser", { 
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(userData),
