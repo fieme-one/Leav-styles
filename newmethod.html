@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://leavstyles.netlify.app/newmethod.css" type="text/css">
+  <title>User Form</title>
+</head>
+
+<body>
+  <header>
+    <nav id="navs">
+      <div class="imgs">
+        <img src="https://raw.githubusercontent.com/fieme-one/Cacha-fitness/refs/heads/main/back-button.png" onclick="goBack()">
+      </div>
+    </nav>
+  </header>
+
+  <!-- User Form -->
+  <div id="mother">
+    <div id="child">
+      <input type="email" placeholder="Email" required>
+      <img src="https://raw.githubusercontent.com/fieme-one/Cacha-fitness/refs/heads/main/email.png" id="em-icon">
+    </div>
+    <div id="child">
+      <input type="text" placeholder="First Name" required>
+    </div>
+    <div id="child">
+      <input type="text" placeholder="Last Name" required>
+    </div>
+    <div id="child-one">
+      <input type="number" placeholder="Number" required>
+      <img src="https://raw.githubusercontent.com/fieme-one/Cacha-fitness/refs/heads/main/phone-call.png" id="ph-icon">
+    </div>
+    <div id="child-one">
+      <input type="text" placeholder="Choose Bank" required>
+    </div>
+    <button id="save">Save</button>
+  </div>
+
+  <script>
+    function goBack() {
+      if (window.history.length > 1) {
+        history.back();
+      } else {
+        window.location.href = "/payments/method.html";
+      }
+    }
+
+    document.getElementById("save").addEventListener("click", async () => {
+      const email = document.querySelector('input[placeholder="Email"]').value.trim();
+      const firstName = document.querySelector('input[placeholder="First Name"]').value.trim();
+      const lastName = document.querySelector('input[placeholder="Last Name"]').value.trim();
+      const number = document.querySelector('input[placeholder="Number"]').value.trim();
+      const bank = document.querySelector('input[placeholder="Choose Bank"]').value.trim();
+
+      if (!email || !firstName || !lastName || !number || !bank) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      const userData = { email, firstName, lastName, number, bank };
+
+      try {
+        const res = await fetch("https://payment-vnsp.onrender.com", { 
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(userData),
+        });
+
+        const data = await res.json();
+        alert(data.message);
+      } catch (err) {
+        alert("❌ Error saving user. Check console for details.");
+        console.error(err);
+      }
+    });
+  </script>
+</body>
+</html>
