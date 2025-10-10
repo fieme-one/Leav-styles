@@ -117,6 +117,35 @@ right: 180px;
 margin-top: -10px;
 
 }
+ #failed{
+  position: fixed;
+  border: 1px solid darkred;
+  bottom: 30px;
+  margin-left: 110px;
+  background: white;
+  color:  red;
+  width: 50%;
+  height: 50px;
+  animation: success 1s ease-in;
+  border-radius: 3px;
+  padding-left: 20px;
+}
+@keyframes success{
+  from{bottom: 0;
+    opacity: 0;
+  }
+  to{bottom: 30px;
+    opacity: 1;
+  }
+}
+#failed img{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+right: 130px;
+margin-top: -10px;
+
+}
 </style>`
 
 document.head.insertAdjacentHTML("beforeend",allStyle)}
@@ -173,4 +202,8 @@ export function success() {
     "success",
     `<img src="http://cdn.jsdelivr.net/gh/fieme-one/Cacha-fitness@main/check-circle.png"> created successfully`
   );
+  
+}
+export function failed(){
+  showPopup(`failed`, `<img src="http://cdn.jsdelivr.net/gh/fieme-one/Cacha-fitness@main/cross-circle.png"> failed!`);
 }
