@@ -8,6 +8,8 @@ export async function popLOGIN(param) {
   color: #888;
   position: fixed;
   top: 30px;
+  left: 160px;
+  z-index: 1000000;
   justify-self: center;
   background: white;
   width: 70%;
